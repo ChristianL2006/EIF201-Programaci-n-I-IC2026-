@@ -1,0 +1,19 @@
+#ifndef TEMPERATURA_H
+#define TEMPERATURA_H
+
+double* crearRegistro(int& cantidadDias);
+
+void ingresarTemperaturas(const double* registro, int cantidad);
+
+double calcularPromedio(const double* registro, int candidad);
+
+double calcularMaximo(const double* registro, int cantidad);
+
+double calcularMinimo(const double* registro, int cantidad);
+
+void mostrarResultado(const double* registro, int cantidad);
+
+
+
+#endif //TEMPERATURA_H
+
