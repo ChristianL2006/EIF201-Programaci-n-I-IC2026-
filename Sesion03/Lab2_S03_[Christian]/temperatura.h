@@ -11,7 +11,7 @@ double calcularMaximo(const double* registro, int cantidad);
 
 double calcularMinimo(const double* registro, int cantidad);
 
-void mostrarResultado(const double* registro, int cantidad);
+void mostrarResultados(const double* registro, int cantidad);
 
 
 
