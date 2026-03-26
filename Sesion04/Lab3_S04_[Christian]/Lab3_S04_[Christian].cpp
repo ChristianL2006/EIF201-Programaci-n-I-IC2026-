@@ -12,12 +12,12 @@ void limpiarBuffer() {
 
 void mostrarMenu() {
     std::cout << "\n||--------------------------------------||\n";
-	std::cout << "||     FlotaExpress - Menu Principal   ||\n";
-	std::cout << "\n||--------------------------------------||\n";
+	std::cout << "||     FlotaExpress - Menu Principal    ||\n";
+	std::cout << "||--------------------------------------||\n";
 	std::cout << "||1. Registrar vehiculo                 ||\n";
 	std::cout << "||2. Buscar vehiculo por placa          ||\n";
 	std::cout << "||3. Mostrar vehiculo por marca         ||\n";
-	std::cout << "||4. Regristrar kilometros              ||\n";
+	std::cout << "||4. Registrar kilometros              ||\n";
 	std::cout << "||5. Desactivar Vehiculo                ||\n";
 	std::cout << "||6. Reactivar vehiculo                 ||\n";
 	std::cout << "||7. Eliminar vehiculo                  ||\n";
@@ -52,7 +52,7 @@ int main()
             std::getline(std::cin, placa);
             std::cout << "Marca       : ";
             std::getline(std::cin, marca);
-            std::cout << "Año         : ";
+            std::cout << "Anio         : ";
             std::cin >> anio;
             std::cout << "Kilometraje : ";
             std::cin >> km;
@@ -60,7 +60,7 @@ int main()
 
           
             if (flota.buscarPorPlaca(placa) != nullptr) {
-                std::cout << "[ERROR] La placa del vehiculo ya existe \"" << placa << "\".\n";
+                std::cout << "La placa del vehiculo ya existe \"" << placa << "\".\n";
                 break;
             }
 
@@ -81,7 +81,7 @@ int main()
                 v->mostrar();
             }
             else {
-                std::cout << "[INFO] No se encontro nigun vehiculo con la placa:  \""
+                std::cout << "No se encontro nigun vehiculo con la placa:  \""
                     << placa << "\".\n";
             }
             break;
@@ -161,7 +161,7 @@ int main()
             std::cout << "\n--- Eliminar Vehiculo ---\n";
             std::cout << "Placa: ";
             std::getline(std::cin, placa);
-            flota.elimiar(placa);
+            flota.eliminar(placa);
             break;
         }
 
@@ -185,7 +185,7 @@ int main()
         }
 
         default:
-            std::cout << "[ERROR] Opción inválida. Ingrese un número del 1 al 10.\n";
+            std::cout << "Opción inválida. Ingrese un número del 1 al 10.\n";
             break;
         }
 

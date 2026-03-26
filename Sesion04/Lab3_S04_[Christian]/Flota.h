@@ -3,7 +3,7 @@
 
 #include "Vehiculo.h"
 #include <iostream>
-
+#include <string>
 namespace UNA {
 	class Flota
 	{
@@ -24,7 +24,7 @@ namespace UNA {
 		void agregar(Vehiculo* nuevo);
 		Vehiculo* buscarPorPlaca(std::string placa);
 		void mostrarPorMarca(std::string Marca);
-		bool elimiar(std::string placa);
+		bool eliminar(std::string placa);
 		int contarActivos();
 		void mostrarTodos();
 		
