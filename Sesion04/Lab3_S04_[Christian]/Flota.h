@@ -23,7 +23,7 @@ namespace UNA {
 		//Metodos
 		void agregar(Vehiculo* nuevo);
 		Vehiculo* buscarPorPlaca(std::string placa);
-		void mostrarPorPlaca(std::string Marca);
+		void mostrarPorMarca(std::string Marca);
 		bool elimiar(std::string placa);
 		int contarActivos();
 		void mostrarTodos();

@@ -4,7 +4,7 @@
 namespace UNA {
 
 	Vehiculo::Vehiculo(std::string placa, std::string marca, int anio, double kilometraje, bool activo) : placa(placa), marca(marca), anio(anio), kilometraje(kilometraje),
-	activo(activo){
+	activo(true){
 	}
 
 	//Getters
@@ -44,7 +44,9 @@ namespace UNA {
 			std::cout << "El Vehiculo " << placa << "ya esta fuera de servicio. \n";
 			return;
 		}
-		activo = false;
+		else {
+			activo = false;
+		}
 		std::cout << "Vehiculo " << placa << "puesta ya fuera de servicio.\n";
 
 	}
