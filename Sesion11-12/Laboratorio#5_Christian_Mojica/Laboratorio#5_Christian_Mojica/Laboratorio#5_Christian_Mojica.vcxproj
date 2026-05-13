@@ -24,6 +24,7 @@
     <ProjectGuid>{6073c1a3-6d2c-49c8-acfb-4e1387aab40d}</ProjectGuid>
     <RootNamespace>Laboratorio5ChristianMojica</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>RadioFM</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,7 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HistorialDoble.cpp" />
     <ClCompile Include="Laboratorio#5_Christian_Mojica.cpp" />
+    <ClCompile Include="RotacionCircular.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HistorialDoble.h" />
+    <ClInclude Include="NodoHistorial.h" />
+    <ClInclude Include="NodoLocutor.h" />
+    <ClInclude Include="RotacionCircular.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
