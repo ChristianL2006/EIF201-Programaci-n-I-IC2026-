@@ -27,10 +27,10 @@ int main() {
        
 
         // Búsqueda
-        cout << "Posicion jazz3: " << h.obtenerPosicion("jazz3") << endl; // 6
-        cout << "Cancion en pos 0: " << h.obtenerEnPosicion(0) << endl; // clas5
-        cout << "jazz3 existe: " << (h.existeCancion("jazz3") ? "si" : "no") << endl; // si
-        cout << "Pos desde final pop7: " << h.obtenerPosicionDesdeElFinal("pop7") << endl; // 3
+        cout << "Posicion jazz3: " << h.obtenerPosicion("jazz3") << endl; 
+        cout << "Cancion en pos 0: " << h.obtenerEnPosicion(0) << endl; 
+        cout << "jazz3 existe: " << (h.existeCancion("jazz3") ? "si" : "no") << endl; 
+        cout << "Pos desde final pop7: " << h.obtenerPosicionDesdeElFinal("pop7") << endl; 
 
         // Eliminación
         h.eliminarPrimera("bosa1");
@@ -42,7 +42,7 @@ int main() {
         h.imprimirCronologico();
 
 
-        cout << "Cantidad: " << h.getCantidad() << endl; // 2
+        cout << "Cantidad: " << h.getCantidad() << endl; 
 
     }
 
@@ -65,12 +65,12 @@ int main() {
         
 
         // Búsqueda
-        cout << "Carlos existe: " << (r.existeLocutor("Carlos") ? "si" : "no") << endl; // si
-        cout << "Posicion Carlos: " << r.obtenerPosicion("Carlos") << endl; // 2
-        cout << "Turno actual: " << r.turnoActual() << endl; // Diego
+        cout << "Carlos existe: " << (r.existeLocutor("Carlos") ? "si" : "no") << endl; 
+        cout << "Posicion Carlos: " << r.obtenerPosicion("Carlos") << endl; 
+        cout << "Turno actual: " << r.turnoActual() << endl; 
 
         // Rotación
-        r.simularTurnos(7);
+        r.simularTurnos(23);
        
 
         // Eliminación
@@ -80,12 +80,18 @@ int main() {
        
 
         cout << "Cantidad: " << r.getCantidad() << endl;
+            
+        cout << "\n=== EJERCICIO 1 ===" << endl;
+        r.imprimirEstadisticas();
+        cout << "Locutor mas activo: " << r.locutorMasActivo() << endl;
+
+
 
         r.eliminarLocutor("Adriana");
         while (!r.estaVacia()) r.eliminarTurnoActual();
 
-        cout << "Vacia: " << (r.estaVacia() ? "si" : "no") << endl; // si
-        cout << "Siguiente vacia: '" << r.siguiente() << "'" << endl; // ''
+        cout << "Vacia: " << (r.estaVacia() ? "si" : "no") << endl; 
+        cout << "Siguiente vacia: '" << r.siguiente() << "'" << endl; 
     }
 
     return 0;

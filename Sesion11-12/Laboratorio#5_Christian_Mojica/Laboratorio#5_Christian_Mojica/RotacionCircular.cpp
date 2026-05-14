@@ -113,6 +113,7 @@ namespace EIF201 {
         NodoLocutor* actual = cabeza;
         NodoLocutor* previo = cola; 
         do {
+
             if (actual->nombre == nombre) {
                 if (actual == cola && actual == cabeza) {
                    
@@ -139,13 +140,14 @@ namespace EIF201 {
         return eliminarLocutor(getCabeza()->nombre);
     }
 
-  
-
     string RotacionCircular::siguiente() {
         if (cola == nullptr) { return ""; }
-        cola = cola->siguiente; 
+        cola = cola->siguiente;            
+        getCabeza()->turnosAsignados++;     
         return getCabeza()->nombre;
     }
+  
+
 
     void RotacionCircular::simularTurnos(int n) {
         if (cola == nullptr) { cout << "Sin locutores en rotacion." << endl; return; }
@@ -165,7 +167,34 @@ namespace EIF201 {
             if (actual != cabeza) { cout << " -> "; }
         } while (actual != cabeza);
         cout << " -> (inicio)" << endl;
+
     }
+    void RotacionCircular::imprimirEstadisticas() const {
+        if (cola == nullptr) { cout << "Rotacion vacia." << endl; return; }
+        NodoLocutor* cabeza = getCabeza();
+        NodoLocutor* actual = cabeza;
+        cout << "=== Estadisticas de turnos ===" << endl;
+        do {
+            cout << actual->nombre << ": " << actual->turnosAsignados << " turno(s)" << endl;
+            actual = actual->siguiente;
+        } while (actual != cabeza);
+    }
+
+    string RotacionCircular::locutorMasActivo() const {
+        if (cola == nullptr) { return ""; }
+        NodoLocutor* cabeza = getCabeza();
+        NodoLocutor* actual = cabeza;
+        NodoLocutor* maximo = cabeza; 
+        actual = actual->siguiente;
+        while (actual != cabeza) {
+            if (actual->turnosAsignados > maximo->turnosAsignados) {
+                maximo = actual;
+            }
+            actual = actual->siguiente;
+        }
+        return maximo->nombre;
+    }
+
 
     int  RotacionCircular::getCantidad() const { return cantidad; }
     bool RotacionCircular::estaVacia()   const { return cola == nullptr; }
